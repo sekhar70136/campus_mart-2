@@ -13,7 +13,7 @@ const Chat = () => {
   useEffect(() => {
     if (!user || !receiverId) return undefined;
 
-    const socket = io('http://localhost:5000', { auth: { userId: user.id } });
+    const socket = io('https://campus-mart-2-3bbb.onrender.com/', { auth: { userId: user.id } });
     socketRef.current = socket;
     socket.on('new-message', (message) => {
       if ((message.senderId === user.id && message.receiverId === receiverId) ||

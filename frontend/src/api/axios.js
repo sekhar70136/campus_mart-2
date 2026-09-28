@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: 'https://campus-mart-2-3bbb.onrender.com/',
 });
 
 api.interceptors.request.use((config) => {
